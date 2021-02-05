@@ -1,30 +1,29 @@
 document.addEventListener("DOMContentLoaded", function(){
-//***************************************************** */   
+//***************************************************** */
 // cacher les questions Facile & Moyen & Difficile
 let questionFacile = document.getElementById("questionF");
 let questionMoyen = document.getElementById("questionM");
 let questionDifficile = document.getElementById("questionD");
+let final = document.getElementById("final");
 
 questionFacile.style.display = "none";
 questionMoyen.style.display = "none";
 questionDifficile.style.display = "none";
-//***************************************************** */  
+//***************************************************** */
 
-//INTRO: gif + button + faire apparaitre le texte de la discussion de départ 
+//INTRO: gif + button + faire apparaitre le texte de la discussion de départ
 
-var discussion = document.getElementById("discussion");
-var discussionGif = "<img alt='gif discussion' src='images/billBobbyDiscutent.gif'>";
+let discussion = document.getElementById("discussion");
+let discussionGif = "<img alt='gif discussion' src='images/billBobbyDiscut.gif'>";
 discussion.innerHTML = discussionGif;
 
 //button-------------------------------------------------------------
-var buttonStart = document.getElementById("buttonStart");
-var button = "<button id='help'>j'aide Bobby</button>";
+let buttonStart = document.getElementById("buttonStart");
+let button = "<button id='help'>j'aide Bobby</button>";
 buttonStart.innerHTML = button;
-var help = document.getElementById("help");
+let help = document.getElementById("help");
 
-help.addEventListener("click", function(){
-    //quand je clique "J'aide Bobby" --> gif zoum gros plan puis première question
-    //disparition
+function disappearIntro(){
     discussion.style.display="none";
     help.style.display="none";
     text.style.display="none";
@@ -32,12 +31,28 @@ help.addEventListener("click", function(){
     text2.style.display="none";
     let beCareful2 = document.getElementById("beCareful2");
     beCareful2.style.display="none";
+}
+
+help.addEventListener("click", function(){
+    //quand je clique "J'aide Bobby" --> première question
+    //disparition
+
+    // discussion.style.display="none";
+    // help.style.display="none";
+    // text.style.display="none";
+    // textB.style.display="none";
+    // text2.style.display="none";
+    // let beCareful2 = document.getElementById("beCareful2");
+    // beCareful2.style.display="none";
+    disappearIntro();
     //apparition
-    var discussion2 = document.getElementById("discussion2");
-    var discussionGif2 = "<img alt='gif discussion' src='images/billBobbyDiscutentZoom.png'>";
+    let discussion2 = document.getElementById("discussion2");
+    let discussionGif2 = "<img alt='gif discussion' src='images/billBobbyDiscut.png'>";
     discussion2.innerHTML = discussionGif2;
 
     questionFacile.style.display = "block";
+
+
 });
 
 //---------------animation du texte ---------------------------------
@@ -59,11 +74,52 @@ function text3(){
     textB.innerHTML = textBobby;
 }
 setTimeout(text1, 1000);
-
-//--------------------------------------------------------------------
-
-
 //---------------fin animation du texte ------------------------------
-
 //---------------fin INTRO--------------------------------------------
+//--------------------------------------------------------------------
+    //question facile submit
+    //propagation avec iframe ds html
+
+    let btnQF = document.querySelector("#btn_questionF");
+    btnQF.addEventListener("click", function(){
+
+        if(document.forms["questionFacile"].reponseA.checked == true){
+            questionFacile.style.backgroundColor = "green";
+            questionMoyen.style.display = "block";
+        }else{
+            questionFacile.style.backgroundColor = "red";
+            document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/lost.html";
+        }
+    });
+    //question moyenne submit
+
+    let btnQM = document.querySelector("#btn_questionM");
+    btnQM.addEventListener("click", function(){
+
+        if(document.forms["questionMoyenne"].reponseC.checked == true){
+            questionMoyen.style.backgroundColor = "green";
+            questionDifficile.style.display = "block";
+        }else{
+            questionMoyen.style.backgroundColor = "red";
+            document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/lost.html";
+        }
+    });
+    //question difficile submit
+
+    let btnQD = document.querySelector("#btn_questionD");
+    btnQD.addEventListener("click", function(){
+
+        if(document.forms["questionDifficile"].reponseB.checked == true){
+            //image gagné
+            questionDifficile.style.backgroundColor = "green";
+            // final.style.display = "block";
+            document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/win.html";
+        }else{
+        //     //image perdu
+        //     final.style.display = "block";
+        questionDifficile.style.backgroundColor = "red";
+        document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/lost.html";
+         }
+    });
+//--------------------------------------------------------------------
 });
