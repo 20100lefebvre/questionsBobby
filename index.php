@@ -12,9 +12,9 @@
 </head>
 <body>
 <header>
-    <!-- texte clignote -->
+    <!-- texte clignote en CSS -->
     <h1 class="image-clignote">Attention danger</h1>
-    
+
     <h1 id="beCareful">Aide Bobby à sauver le monde !</h1>
 
 </header>
@@ -63,11 +63,11 @@ $data = $response->fetch();
 
                 echo
                 "<ul>" .
-                "<li><input type='checkbox' id='reponseA' name='reponse' value='reponseA'>
+                "<li><input type='radio' id='reponseA' name='reponse' value='reponseA'>
                 <label for='reponseA'>" . $data['responseEa'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseB' name='reponse' value='reponseB'>
+                 "<li><input type='radio' id='reponseB' name='reponse' value='reponseB'>
                  <label for='reponseB'>" . $data['responseEb'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseC' name='reponse' value='reponseC'>
+                 "<li><input type='radio' id='reponseC' name='reponse' value='reponseC'>
                  <label for='reponseC'>" . $data['responseEc'] . "</label></li>" .
                 "</ul>";
                 ?>
@@ -83,11 +83,11 @@ $data = $response->fetch();
 
                 echo
                 "<ul>" .
-                "<li><input type='checkbox' id='reponseA' name='reponse' value='reponseA'>
+                "<li><input type='radio' id='reponseA' name='reponse' value='reponseA'>
                 <label for='reponseA'>" . $data['responseMa'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseB' name='reponse' value='reponseB'>
+                 "<li><input type='radio' id='reponseB' name='reponse' value='reponseB'>
                  <label for='reponseB'>" . $data['responseMb'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseC' name='reponse' value='reponseC'>
+                 "<li><input type='radio' id='reponseC' name='reponse' value='reponseC'>
                  <label for='reponseC'>" . $data['responseMc'] . "</label></li>" .
                 "</ul>";
                 ?>
@@ -104,11 +104,11 @@ $data = $response->fetch();
 
                 echo
                 "<ul>" .
-                "<li><input type='checkbox' id='reponseA' name='reponse' value='reponseA'>
+                "<li><input type='radio' id='reponseA' name='reponse' value='reponseA'>
                 <label for='reponseA'>" . $data['responseDa'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseB' name='reponse' value='reponseB'>
+                 "<li><input type='radio' id='reponseB' name='reponse' value='reponseB'>
                  <label for='reponseB'>" . $data['responseDb'] . "</label></li>" .
-                 "<li><input type='checkbox' id='reponseC' name='reponse' value='reponseC'>
+                 "<li><input type='radio' id='reponseC' name='reponse' value='reponseC'>
                  <label for='reponseC'>" . $data['responseDc'] . "</label></li>" .
                 "</ul>";
                 ?>
