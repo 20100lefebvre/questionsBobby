@@ -18,16 +18,19 @@ h1{
    padding: 30px;
    letter-spacing: 5px;
  }
-
+#clignote{
+   background-color: black;
+   color:white;
+}
  .image-clignote  {
-   animation-duration: .8s;
+   animation-duration: 0.8s;
    animation-name: clignoter;
    animation-iteration-count: infinite;
    transition: none;
 }
 @keyframes clignoter {
   0%   { opacity:1; }
-  40%   {opacity:0; }
+  40%  { opacity:0; }
   100% { opacity:1; }
 }
  /* ------------------------------------------------------------------------------------------------ */
@@ -110,7 +113,7 @@ img{
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
-    margin: 20px;
+    margin: 200px;
  }
 h2{
    text-transform: uppercase;
@@ -131,8 +134,7 @@ ul{
     text-align: left;
     list-style: none;
     padding: 20px;
-    margin-left: 50px;
-    padding-left: 0px;
+    padding-left: 40%;
  }
 
  li{
@@ -184,32 +186,21 @@ a{
  }
 
  /* texte perdu arrive après fin gif */
- @keyframes transition {
-   0%   { opacity:0; }
-   100% { opacity:1; }
-   }
+
  .lost{
-    color:white;
-    background-color: black;
-    opacity:0;
-    animation: transition 0.5s ease-in-out 1s forwards;
+
  }
 
  #containerBlack{
-   background-color: black;
+
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-image: url('../images/billBobbyLost.gif');
-   background-color: black;
-    background-size: cover;
-    height: 100vh;
     padding:0;
     margin:0;
 }
 #lfooter{
-   padding-top:600px;
-   color: white;
+   color: black;
    text-align: center;
 }
 

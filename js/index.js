@@ -47,7 +47,7 @@ help.addEventListener("click", function(){
     disappearIntro();
     //apparition
     let discussion2 = document.getElementById("discussion2");
-    let discussionGif2 = "<img alt='gif discussion' src='images/billBobbyDiscut.png'>";
+    let discussionGif2 = "<img alt='gif discussion' src='images/billBobbyDiscut.png' />";
     discussion2.innerHTML = discussionGif2;
 
     questionFacile.style.display = "block";
@@ -117,8 +117,8 @@ setTimeout(text1, 1000);
         }else{
         //     //image perdu
         //     final.style.display = "block";
-        questionDifficile.style.backgroundColor = "red";
-        document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/lost.html";
+        questionDifficile.style.backgroundColor = "orangered";
+        document.location.href="http://vincent.developpeur.free.fr/BobbyQuestions/bobbylost.html";
          }
     });
 //--------------------------------------------------------------------

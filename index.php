@@ -9,12 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"><!--font-->
     <title>Jeu de questions</title>
+
+	<!-- Basic HTML Meta Tags -->
+<meta name='copyright' content='Vincent LEFEBVRE'>
+<meta name="author" content="Vincent LEFEBVRE, vincent.lefebvr@gmail.com">
+
+	<!-- Open Graph data -->
+<meta name="title" property="og:title" content="Jeu de questions"/>
+<meta name="type" property="og:type" content="jeu"/>
+<meta name="url" property="og:url" content="http://vincent.developpeur.free.fr/BobbyQuestions/"/>
+<meta name="image" property="og:image" content="images/billBobbyDiscut.png"/>
+<meta name='og:country-name' content='France'>
+<meta name="publish_date" property="og:publish_date" content="2021-02-01T00:00:00-0600">
+<meta name="description" property="og:description" content="Attention ceci est jeu de trois questions pour sauver le monde...
+    Si vous échouez à une seule des trois questions, le monde explosera et ce sera terminé !
+	--------------------------------------------------------------------------------------------------------
+	Rassurez-vous on dira que c'est la faute de Bobby ^^
+	--------------------------------------------------------------------------------------------------------
+	Les deux personnages: le brun est Bobby, le blond est Bill sont mes personnages de bande dessinée (http://bill-et-bobby.over-blog.com/)
+	--------------------------------------------------------------------------------------------------------
+    environnement de travail: GIT,Visual Studio Code / Html, Css, Js / Php, PhpMyAdmin.
+	--------------------------------------------------------------------------------------------------------
+	"/>
 </head>
 <body>
 <header>
     <!-- texte clignote en CSS -->
-    <h1 class="image-clignote">Attention danger</h1>
-
+    <h1 id="clignote" class="image-clignote">Attention danger</h1>
     <h1 id="beCareful">Aide Bobby à sauver le monde !</h1>
 
 </header>
